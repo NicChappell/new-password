@@ -1,0 +1,88 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+#app {
+  align-items: flex-start;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+  .card-header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    .card-title {
+      line-height: 2.5rem;
+      margin: 0;
+    }
+    .logo {
+      height: auto;
+      margin-right: 0.5rem;
+      max-height: 2.5rem;
+      max-width: 2.5rem;
+      width: 100%;
+    }
+  }
+  .card-body {
+    .generate-password {
+      textarea {
+        background-color: transparent;
+		border: none;
+		display: block;
+		font-family: "Source Code Pro", monospace;
+		font-size: 1.5rem;
+		font-weight: 600;
+		line-height: 3rem;
+		outline: none;
+		resize: none;
+		padding: 1rem;
+		text-align: center;
+		width: 100%;
+      }
+    }
+    .password-length {
+      label {
+        font-size: 1.25rem;
+        span {
+          font-weight: 600;
+        }
+      }
+    }
+    .character-buttons {
+      .btn-secondary {
+        &:focus {
+          color: #fff;
+          background-color: #6c757d;
+          border-color: #6c757d;
+        }
+        &:hover {
+          color: #fff;
+          background-color: #6c757d;
+          border-color: #6c757d;
+        }
+      }
+      .btn-outline-secondary {
+        &:focus {
+          color: #6c757d;
+          background-color: transparent;
+          border-color: #6c757d;
+        }
+        &:hover {
+          color: #6c757d;
+          background-color: transparent;
+          border-color: #6c757d;
+        }
+      }
+      .character {
+        line-height: 1.5rem;
+        margin: 0.5rem;
+        padding: 0.75rem;
+        width: 3rem;
+      }
+    }
+  }
+  .card-footer {
+    // styles go here
+  }
+}
