@@ -66,22 +66,12 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
-#app .card-body .character-buttons .btn-secondary:focus {
+#app .card-body .character-buttons .btn-secondary:active, #app .card-body .character-buttons .btn-secondary:focus, #app .card-body .character-buttons .btn-secondary:focus-within, #app .card-body .character-buttons .btn-secondary:hover {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
 }
-#app .card-body .character-buttons .btn-secondary:hover {
-  color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
-#app .card-body .character-buttons .btn-outline-secondary:focus {
-  color: #6c757d;
-  background-color: transparent;
-  border-color: #6c757d;
-}
-#app .card-body .character-buttons .btn-outline-secondary:hover {
+#app .card-body .character-buttons .btn-outline-secondary:active, #app .card-body .character-buttons .btn-outline-secondary:focus, #app .card-body .character-buttons .btn-outline-secondary:focus-within, #app .card-body .character-buttons .btn-outline-secondary:hover {
   color: #6c757d;
   background-color: transparent;
   border-color: #6c757d;

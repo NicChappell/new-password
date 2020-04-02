@@ -58,8 +58,8 @@ body {
           border: none;
           font-size: 1.25rem;
           font-weight: 600;
-		  width: 7.5rem;
-		  -moz-appearance: textfield;
+          width: 7.5rem;
+          -moz-appearance: textfield;
           &:focus {
             box-shadow: none;
           }
@@ -73,11 +73,9 @@ body {
     }
     .character-buttons {
       .btn-secondary {
-        &:focus {
-          color: #fff;
-          background-color: #6c757d;
-          border-color: #6c757d;
-        }
+        &:active,
+        &:focus,
+        &:focus-within,
         &:hover {
           color: #fff;
           background-color: #6c757d;
@@ -85,11 +83,9 @@ body {
         }
       }
       .btn-outline-secondary {
-        &:focus {
-          color: #6c757d;
-          background-color: transparent;
-          border-color: #6c757d;
-        }
+        &:active,
+        &:focus,
+        &:focus-within,
         &:hover {
           color: #6c757d;
           background-color: transparent;
