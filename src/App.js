@@ -35,7 +35,7 @@ const App = () => {
 	const [selectedUpperCaseCharacters, setSelectedUpperCaseCharacters] = useState([])
 
 	// ref hook varialbes
-	const passwordRef = useRef(null);
+	const passwordRef = useRef(null)
 
 	// utility variables
 	const date = new Date()
@@ -96,14 +96,19 @@ const App = () => {
 		setCopyButtonText('Copy to Clipboard')
 	}, [passwordLength, selectedCharacters])
 
-	// update scroll height when password changes
+	// reset scroll height when password changes
+	useEffect(() => {
+		setScrollHeight(0)
+	}, [password])
+
+	// calculate scroll height whenever its value changes
 	useEffect(() => {
 		setScrollHeight(passwordRef.current.scrollHeight)
-	}, [password])
+	}, [scrollHeight])
 
 	return (
 		<div id="app">
-			<div className="container my-5">
+			<div className="container my-3">
 				<div className="row">
 					<div className="col">
 						<div className="card text-center">

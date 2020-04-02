@@ -11,6 +11,8 @@ const CharacterButtons = props => {
     } = props
 
     // state hook variables
+    const [disableDeselectAll, setDisableDeselectAll] = useState(false)
+    const [disableSelectAll, setDisableSelectAll] = useState(true)
     const [selectedCharacterObjects, setSelectedCharacterObjects] = useState(characters)
 
     const handleCharacterClick = (selectedCharacterObject) => {
@@ -70,6 +72,24 @@ const CharacterButtons = props => {
         handleSelectClick(true)
     }, [])
 
+    // determine disabled status when selected characters change
+    useEffect(() => {
+        // filter selected characters
+        const filteredSelectedCharacters = selectedCharacterObjects.filter(charObj => charObj.selected === true)
+        
+        // update state
+        if (filteredSelectedCharacters.length === 0) {
+            setDisableDeselectAll(true)
+            setDisableSelectAll(false)
+        } else if (filteredSelectedCharacters.length === characters.length) {
+            setDisableDeselectAll(false)
+            setDisableSelectAll(true)
+        } else {
+            setDisableDeselectAll(false)
+            setDisableSelectAll(false)
+        }
+    }, [selectedCharacterObjects])
+
     return (
         <div className="row character-buttons">
             <div className="col-12">
@@ -78,10 +98,10 @@ const CharacterButtons = props => {
                         <h5 className="card-title">{name} Characters</h5>
                     </div>
                     <div className="col-xs-12 col-sm-6 text-xs-center text-sm-right">
-                        <button className="btn btn-secondary mr-2" onClick={() => handleSelectClick(true)}>
+                        <button className="btn btn-secondary mr-2" disabled={disableSelectAll} onClick={() => handleSelectClick(true)}>
                             Select All
                         </button>
-                        <button className="btn btn-outline-secondary ml-2" onClick={() => handleSelectClick(false)}>
+                        <button className="btn btn-outline-secondary ml-2" disabled={disableDeselectAll} onClick={() => handleSelectClick(false)}>
                             Deselect All
                         </button>
                     </div>
