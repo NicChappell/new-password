@@ -54,7 +54,7 @@ const App = () => {
 		setCopyButtonText('Copied!')
 		setTimeout(() => {
 			setCopyButtonText('Copy to Clipboard')
-		  }, 5000)
+		}, 5000)
 	}
 
 	const handleGenerateClick = () => generatePassword()
@@ -108,7 +108,7 @@ const App = () => {
 
 	return (
 		<div id="app">
-			<div className="container my-3">
+			<div className="container py-3">
 				<div className="row">
 					<div className="col">
 						<div className="card text-center">
@@ -124,9 +124,11 @@ const App = () => {
 										<button className="btn btn-primary mx-2 my-3" onClick={handleGenerateClick}>
 											Generate Password
 										</button>
-										<button className="btn btn-outline-primary mx-2 my-3" onClick={handleCopyClick}>
-											{copyButtonText}
-										</button>
+										{document.queryCommandSupported('copy') &&
+											<button className="btn btn-outline-primary mx-2 my-3" onClick={handleCopyClick}>
+												{copyButtonText}
+											</button>
+										}
 									</div>
 								</div>
 								<PasswordLength liftState={setPasswordLength} />
