@@ -112,9 +112,44 @@ const App = () => {
 				<div className="row">
 					<div className="col">
 						<div className="card text-center">
-							<div className="card-header">
+							{/* <div className="card-header">
 								<img alt="logo" className="logo" src={logo} />
 								<h5 className="card-title">Secure Password Generator</h5>
+							</div> */}
+							<div className="card-header">
+								{/* <div className="brand">
+									<img alt="logo" className="logo" src={logo} />
+									<h5 className="card-title">Secure Password Generator</h5>
+								</div>
+								<ul className="nav nav-tabs card-header-tabs">
+									<li className="nav-item">
+										<a className="nav-link active" href="#">Active</a>
+									</li>
+									<li className="nav-item">
+										<a className="nav-link" href="#">Link</a>
+									</li>
+									<li className="nav-item">
+										<a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+									</li>
+								</ul> */}
+								<div className="container">
+									<div className="row">
+										<div className="col-sm-12 col-md-6 mb-2 mb-md-0 branding">
+											<img alt="logo" className="logo" src={logo} />
+											<h5 className="card-title">Secure Password Generator</h5>
+										</div>
+										<div className="col-sm-12 col-md-6 mt-2 mb-md-0 d-none d-sm-flex routes">
+											<ul className="nav nav-tabs card-header-tabs">
+												<li className="nav-item">
+													<a className="nav-link active" href="#">Password Generator</a>
+												</li>
+												<li className="nav-item">
+													<a className="nav-link" href="#">Password Math</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
 							<div className="card-body">
 								<div className="row generate-password">
