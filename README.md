@@ -2,11 +2,11 @@
 
 [NewPassword.pw](https://newpassword.pw) makes it quick and easy to generate secure passwords using any combination of characters.
 
+![screenshot](https://raw.githubusercontent.com/NicChappell/new-password/master/screenshot.png)
+
 # Motivation
 
 [NewPassword.pw](https://newpassword.pw) was created to make an everyday need as simple as possible.
-
-# Screenshots
 
 # Tech Stack
 
